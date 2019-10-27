@@ -1,0 +1,103 @@
+.home{
+    height: 100%;
+    padding-top: 84px;
+    @include rwd(300,500){
+        height: 100vh;
+    }
+    @include msm{
+        height: 100vh;
+    }
+
+    .home-header{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        @include msm{
+            align-items: flex-start;
+        }
+        @include md{
+            align-items: center;
+        }
+        .title-container{
+            @include xl{
+                margin-bottom:150px;
+            }
+        }
+        .main-title{
+            color: $blue;
+            text-transform: uppercase;
+            font-size: $xlarge-font;
+            margin-bottom: 0;
+            text-align: center;
+            @include msm{
+                text-align: left;
+                align-items: flex-start;
+            }
+            @include md{
+                font-size: $xxlarge-font;
+                align-items: center;
+            }
+        }
+        .slogan{
+            color: $dark-orange;
+            font-size: $regular-font;
+            text-align: center;
+            @include msm{
+                text-align: left;
+            }
+            @include md{
+                width: 350px;
+                text-align: center;
+            }
+            @include md{
+                font-size: $title-font;
+            }
+        }
+        .header-buttons-container{
+            margin: 40px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include msm{
+                width: 300px;
+                display: block;
+            }
+            button{
+                width: 110px;
+                height: 40px;
+                text-transform: capitalize;
+            }
+            .products-button{
+                color: white;
+                text-transform: capitalize;
+                background-color: $bright-orange;
+                border: 1px solid $dark-orange;
+                box-shadow: $main-box-shadow;
+                transition: $transition-main;
+                margin-right: 25px;
+                &:hover{
+                    transition: $transition-main;
+                    color: $bright-orange;
+                    background-color: white;
+                }
+            }
+            .contact-button{
+                color: $bright-orange;
+                background-color: white;
+                border: 1px solid $dark-orange;
+                transition: $transition-main;
+                &:hover{
+                    transition: $transition-main;
+                    box-shadow: $main-box-shadow;
+                }
+            }
+        }
+    }
+    .banner-container{
+        width: 100%;
+        img{
+            width: inherit;
+        }
+    }
+}

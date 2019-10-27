@@ -4,7 +4,11 @@
     font-family: $main-font-family;
     box-sizing: border-box;
 }
-
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 .grow{
     flex-grow: 1;
 }
@@ -19,6 +23,18 @@
     justify-content: flex-start;
 }
 
+.mobile{
+    display: block;
+    @include msm{
+        display: none;
+    }
+}
+.desktop{
+    display: none;
+    @include msm{
+        display: block;
+    }
+}
 .container{
     @include xs{
         padding: 74px 16px 32px;
