@@ -1,0 +1,18 @@
+@import './utilities/breakpoints';
+@import './utilities/colors';
+@import './utilities/mixins';
+@import './utilities/variables';
+
+@import './base/base';
+
+@import './pages/home';
+@import './pages/product';
+@import './pages/contact';
+
+@import './pages/components/navbar';
+@import './pages/components/footer';
+@import './pages/components/sidebar';
+
+
+
+

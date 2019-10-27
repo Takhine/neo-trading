@@ -1,0 +1,124 @@
+.grow{
+    flex-grow: 1;
+}
+.flex-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#navbar{
+    background: white;
+    height: 60px;
+    @include mmd{
+        height: 70px;
+    }
+    .MuiToolbar-regular{
+        padding: 0 16px;
+        height: 60px;
+        @include mmd{
+        padding: 0 80px;
+        height: 70px;
+        }
+        @include xl{
+            padding: 0 120px;
+        }
+        .menu-button{
+            color: $dark-red;
+            z-index: 2;
+            @include mr-10;
+            display: block;
+            @include sm{
+                display: none;
+            }
+        }
+        .logo-container{
+            @include xs{
+            flex-grow: 0;
+            position: absolute;
+            left: 0;
+            display: flex;
+            right: 0;
+            width: 100%;
+            top: 0;
+            text-align: center;
+            bottom: 0;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            }
+            @include sm{
+                flex-grow: 1;
+                position: relative;
+                display: block;
+                text-align: left;
+                width: auto;
+            }
+            img{
+                width: 30px;
+                @include md{
+                    width: 40px;
+                }
+            }
+        }
+        .nav-menu-container{
+            display: none;
+            font-size: $small-font;
+            @include sm{
+                display: block;
+            }
+            a{
+                text-decoration: none;
+                &.active{
+                    button{
+                        border-bottom: 2px solid $dark-red;
+                        transition: $transition-main;
+                    }
+                }
+            }
+            button{
+                margin-left: 55px;
+                font-size: $title-font;
+                text-transform: capitalize;
+                color: $dark-red;
+                border-radius: 0;
+                transition: $transition-main;
+                &:hover{
+                    border-bottom: 2px solid $dark-red;
+                    transition: $transition-main;
+                }
+                
+            }
+            .contact-button{
+                color: white;
+                background: $bright-orange;
+                border-radius: $button-border-radius;
+                box-shadow: $main-box-shadow;
+                &:hover{
+                    border-bottom: 2px solid $dark-orange;
+                    transition: $transition-main;
+                }
+            }
+        }
+        .nav-contact-container{
+            display: block;
+            @include sm{
+                display: none;
+            }
+            button{
+                text-transform: capitalize;
+                color: white;
+                background: $bright-orange;
+                border-radius: $button-border-radius;
+                box-shadow: $main-box-shadow;
+                transition: $transition-main;
+                &:hover{
+                    border-bottom: 2px solid $dark-orange;
+                    transition: $transition-main;
+                }
+            }
+        }
+    }
+    
+    
+}

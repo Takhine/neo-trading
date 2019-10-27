@@ -1,0 +1,17 @@
+// @import url('https://www.fontify.me/wf/c237ae81839c0e365cd53275e6330b81');
+
+*{
+    font-family: $main-font-family;
+    box-sizing: border-box;
+}
+.container{
+    @include xs{
+        padding: 74px 16px 32px;
+    }
+    @include mmd{
+        padding: 84px 80px 32px;
+    }
+    @include xl{
+        padding: 84px 120px 32px;
+    }
+}
