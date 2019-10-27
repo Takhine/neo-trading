@@ -27,16 +27,12 @@ const navItems = [
 
 
 const Sidebar = (props) => {
-    const [open, setOpen] = React.useState(true);
-    function handleClick() {
-        setOpen(!open);
-    }
 
     return (
         <div
             className="sidebar-list"
             role="presentation"
-            onClick={handleClick}
+            onClick={props.toggleDrawer}
         >
             <List>
                 {navItems.map((navItem) => (

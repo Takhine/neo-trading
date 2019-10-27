@@ -1,0 +1,51 @@
+.contact-container{
+    .MuiPaper-root{
+        width: 300px;
+    }
+    .contact-box{
+        padding: 20px;
+        h2{
+            color: $bright-orange;
+        }
+    }
+    .contact-field-container{
+        .contact-field{
+            width: 100%;
+        }
+        .MuiFormLabel-root{
+            color: $blue;
+        }
+        .MuiInputBase-input{
+            &::placeholder{
+                color: $blue;
+                opacity: .8;
+            }
+
+        }
+        .MuiFormLabel-root.Mui-focused{
+            color: $dark-orange;
+        }
+        .MuiInput-underline:after{
+            border-bottom: 2px solid $dark-orange;
+        }
+    }
+    textarea{
+        width: 100%;
+        border: .5px solid $blue;
+                &:focus{
+                    border: .5px solid $blue;
+                }
+    }
+    .button-row{
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 8px;
+        .MuiButton-label{
+            border-bottom: 1px solid $blue;
+        }
+        .MuiTypography-root{
+            font-size: $small-font;
+        }
+
+    }
+}

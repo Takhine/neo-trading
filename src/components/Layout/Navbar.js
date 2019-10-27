@@ -15,9 +15,12 @@ import logo from 'static/images/logo.svg';
 import cancel from 'static/images/icons/sidebar-cancel-icon.png';
 
 import Sidebar from './Sidebar';
+import Contact from '../Contact';
+
 const Navbar = () => {
     const [state, setState] = React.useState({
         left: false,
+        right:false,
     });
 
     const toggleDrawer = (side, open) => event => {
@@ -30,7 +33,13 @@ const Navbar = () => {
     // Sidebar Menu
     const leftSideList = side => (
         <div>
-            <Sidebar />
+            <Sidebar toggleDrawer={toggleDrawer('left',false)}/>
+        </div>
+    );
+    // Contact Form
+    const rightSideList = side => (
+        <div>
+            <Contact toggleDrawer={toggleDrawer('right',false)} />
         </div>
     );
     return (
@@ -67,11 +76,21 @@ const Navbar = () => {
                         <NavLink exact to="/products">
                             <Button className="nav-button">Products</Button>
                         </NavLink>
-                            <Button className="nav-button contact-button">Contact</Button>
+                            <Button className="nav-button contact-button" onClick={toggleDrawer('right', true)}>Contact</Button>
                     </div>
                     <div className="nav-contact-container">
-                    <Button className="nav-button contact-button">Contact</Button>
+                    <Button className="nav-button contact-button" onClick={toggleDrawer('right', true)}>Contact</Button>
                     </div>
+                    <Drawer className="contact-container" role="temporary" anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
+                        <div className="flex-start">
+                            <IconButton
+                                onClick={toggleDrawer('right', false)}
+                            >
+                                <img src={cancel} alt="cancel" width="18" />
+                            </IconButton>
+                        </div>
+                        {rightSideList('right')}
+                    </Drawer>
                 </Toolbar>
             </AppBar>
         </div>
