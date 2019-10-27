@@ -109,11 +109,11 @@
     .about{
         padding-top: 20px;
         background-color: #fafafa;
-        .about-title{
+        @at-root .about-title{
             color: $dark-orange;
-            font-size: $regular-font;
+            font-size: $title-font;
             @include md{
-                font-size: $title-font;
+                font-size: $large-font;
             }
         }
         .about-content{
@@ -135,5 +135,47 @@
         }
     }
     // About End
+
+    // Benefits Start
+    .benefits{
+        .benefits-container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .leaves{
+            position: absolute;
+            width:inherit;
+            height: inherit;
+            top: 0%;
+            left: 0%;
+            display: none;
+            @include md{
+                display: block;
+            }
+        }
+        .benefits-title{
+            @extend .about-title;
+        }
+        .benefit-grid{
+            .benefit-div{
+                display: flex;
+                img{
+                    width: 15px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    @include msm{
+                        margin-bottom: 0;
+                    }
+                }
+                p{
+                    font-size: $title-font;
+                    display: inline;
+                }
+            }
+            
+        }
+    }
+    // Benefits End
 
 }
