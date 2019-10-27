@@ -69,6 +69,7 @@
             }
             a{
                 text-decoration: none;
+                transition: $transition-main;
                 &.active{
                     button{
                         border-bottom: 2px solid $dark-red;

@@ -45,7 +45,7 @@ const Navbar = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Drawer role="temporary" open={state.left} onClose={toggleDrawer('left', false)}>
+                    <Drawer className="sidebar-container" role="temporary" open={state.left} onClose={toggleDrawer('left', false)}>
                         <div className="flex-end">
                             <IconButton
                                 onClick={toggleDrawer('left', false)}

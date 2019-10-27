@@ -1,0 +1,17 @@
+.sidebar-container{
+    .MuiPaper-root{
+        width: 250px;
+    }
+    .sidebar-list{
+        a{
+            text-decoration: none;
+            color: $dark-red;
+        }
+        .list-item{
+            .MuiListItemIcon-root{
+                color:$dark-red;
+                padding-left: 20px;
+            }
+        }
+    }
+}
