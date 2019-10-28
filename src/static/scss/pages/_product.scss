@@ -5,16 +5,17 @@
         padding-left: 0;
         padding-right: 0;
         padding-top: 60px;
-        .header-title{
-            font-size:$large-font;
-            color: $primary-white;
+        padding-bottom: 0;
+        .header-menu{
             position: absolute;
             margin-left: 16px;
             top: 10%;
-
+            color: $primary-white;
             @include md{
-                font-size: $xlarge-font;
-                top: 20%;
+                top: 15%;
+            }
+            @include msm{
+                margin-left: 32px;
             }
             @include mmd{
                 margin-left: 80px;
@@ -23,10 +24,58 @@
                 margin-left: 120px;
             }
         }
+        .header-title{
+            font-size:$large-font;
+            margin-bottom: 0;
+            @include md{
+                font-size: $xlarge-font;
+            }
+        }
+        .hash-link{
+            font-size: $small-font;
+            @include md{
+                font-size: $title-font;
+            }
+        }
         img{
             width: 100%;
             max-height: 550px;
         }
     }
     // Header End
+    // Products
+    .main-heading{
+        color: $dark-orange;
+        font-size: $title-font;
+    }
+    .table-heading{
+        color: $bright-orange;
+        font-size: $regular-font;
+    }
+    // Table Start Table End
+    .table{
+        .MuiTableCell-sizeSmall{ 
+            padding: 10px;
+                font-size: $xsmall-font;
+            @include msm{
+                font-size: $small-font;
+                padding: 10px 24px 10px 16px;
+            }
+        }
+    }
+    .broiler{
+        padding-top: 20px;
+        p{
+            color: $blue;
+        }
+        .note{
+            font-weight: $bold-font;
+            font-size: $small-font;
+            color: $bright-orange;
+        }
+    }
+    .layer{
+        padding-top: 20px;
+        background: #fafafa;
+    }
 }

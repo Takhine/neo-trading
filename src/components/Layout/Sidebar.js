@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { NavLink } from 'react-router-dom';
 
 import Home from '@material-ui/icons/Home';
-import Collections from '@material-ui/icons/Collections';
+import Cart from '@material-ui/icons/ShoppingCart';
 
 
 
@@ -21,7 +21,7 @@ const navItems = [
         id: 2,
         outlink: '/products',
         name: 'Products',
-        icon: <Collections/>,
+        icon: <Cart/>,
     }
 ]
 
