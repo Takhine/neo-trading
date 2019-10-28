@@ -9,7 +9,9 @@
         @include msm{
             height: 100vh;
         }
-    
+        @media (max-width:1024px) and (min-height:1024px){
+            height: 100%;
+        }
         .header-container{
             margin: auto;
             width: 100%;
@@ -171,11 +173,66 @@
                 p{
                     font-size: $title-font;
                     display: inline;
+                    color: $blue;
+                    font-weight: $bold-font;
                 }
             }
             
         }
     }
     // Benefits End
-
+    // Products Start
+    .products{
+        background-color: $bright-orange;
+        .products-title{
+            @extend .about-title;
+            color: white;
+            text-align: center;
+        }
+        hr{
+            margin-bottom: 60px;
+            max-width: 850px;
+            border-width: .5px;
+        }
+        .products-grid-1{
+            display: flex;
+            justify-content: center;
+            @include mmd{
+                justify-content: flex-end;
+            }
+        }
+        .products-grid-2{
+            display: flex;
+            justify-content: center;
+            @include mmd{
+                justify-content: flex-start;
+            }
+        }
+        .products-card{
+            max-width: 400px;
+            background: $blue;
+            .image-container{
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    border-radius: inherit;
+                    transition:$transition-main;
+                    &:hover{
+                        transition:$transition-main;
+                        transform: scale(1.2);
+                        transition-delay: .2s;
+                    }
+                }
+            }
+            h3{
+                text-align: center;
+                color: white;
+                font-weight: $bold-font;
+            }
+        }
+    }
+    // Products End
 }

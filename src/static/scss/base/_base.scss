@@ -36,8 +36,9 @@ html,body{
     }
 }
 .container{
-    @include xs{
-        padding: 74px 16px 32px;
+    padding: 74px 16px 32px;
+    @include msm{
+    padding: 74px 32px 32px;
     }
     @include mmd{
         padding: 84px 80px 32px;

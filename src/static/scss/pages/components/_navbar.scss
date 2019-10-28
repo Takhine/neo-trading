@@ -7,6 +7,9 @@
     .MuiToolbar-regular{
         padding: 0 16px;
         height: 60px;
+        @include msm{
+        padding: 0 32px;
+        }
         @include mmd{
         padding: 0 80px;
         height: 70px;
