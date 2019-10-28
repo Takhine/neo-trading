@@ -43,7 +43,7 @@ const Footer = () => {
                             <ListItemIcon><Mail /></ListItemIcon>
                             <ListItemText>
                                 <p>
-                                    yaszdigodrej66@gmail.com
+                                    info@neotrading.in
                             </p>
                             </ListItemText>
                         </ListItem>
