@@ -8,6 +8,7 @@ import {
 
 import Home from 'pages/Home';
 import Products from 'pages/Products';
+import ScrollToTop from './components/ScrollToTop';
 
 import Layout from 'components/Layout';
 
@@ -15,11 +16,13 @@ const App=()=> {
   return (
     <BrowserRouter>
       <Layout>
+        <ScrollToTop>
         <Switch>
           <Route  path="/" exact component={Home} />
           <Route  path="/products" exact component={Products} />
 
         </Switch>
+        </ScrollToTop>
       </Layout>
     </BrowserRouter>
   );
