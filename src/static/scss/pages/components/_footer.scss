@@ -1,4 +1,18 @@
 .footer{
     background: $blue;
     color: $primary-white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .MuiListItem-root{
+        align-items: flex-start;
+        padding: 0 16px;
+    }
+    .MuiListItemIcon-root{
+        margin-top: 20px;
+        color: $primary-white;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-white;
+    }
 }

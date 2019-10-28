@@ -178,7 +178,7 @@ const Broiler = () => {
 
                 }
             </Grid>
-            <p className="note">If oil has to be added then add 5 kg oil in Pre Starter, 10 kg oil in Starter and 20 kg oil in Finisher. Reduce the quantity of maize accordingly. <br/> Add toxin binder if required.</p>
+            <p className="note">* If oil has to be added then add 5 kg oil in Pre Starter, 10 kg oil in Starter and 20 kg oil in Finisher. Reduce the quantity of maize accordingly. <br/> Add toxin binder if required.</p>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grid, Paper } from '@material-ui/core';
-
+import { Grid, Paper, Button } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 import layer from 'static/images/red-bird.jpg';
 import broiler from 'static/images/white-bird.jpg';
 
@@ -9,18 +9,23 @@ import broiler from 'static/images/white-bird.jpg';
 const Products = () => {
     return (
         <div className="products container">
-            <h2 className="products-title">Poultry Concentrates</h2>
-            <hr/>
+            <div className="title-container">
+                <h2 className="products-title">Poultry Concentrates</h2>
+                <NavLink exact to="/products">
+                    <Button>View All</Button>
+                </NavLink>
+            </div>
+            <hr />
             <Grid
                 container
                 direction="row"
                 justify="center"
                 alignItems="center"
                 spacing={4}>
-                <Grid  className="products-grid-1" item xs={12} md={6}>
+                <Grid className="products-grid-1" item xs={12} md={6}>
                     <Paper className="products-card">
                         <div className="image-container">
-                        <img src={broiler} alt="Broiler Bird" />
+                            <img src={broiler} alt="Broiler Bird" />
                         </div>
                         <h3>Broiler Concentrates</h3>
                     </Paper>

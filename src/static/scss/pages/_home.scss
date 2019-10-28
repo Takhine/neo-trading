@@ -187,11 +187,33 @@
     // Products Start
     .products{
         background-color: $bright-orange;
-        .products-title{
-            @extend .about-title;
-            color: white;
-            text-align: center;
+        .title-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .products-title{
+                @extend .about-title;
+                color: white;
+                text-align: center;
+                margin-right: 20px;
+            }
+            a{
+                text-decoration: none;
+            }
+            button{
+                color: $primary-white;
+                background-color: $blue;
+                text-transform: capitalize;
+                transition:$transition-main;
+                border: 2px solid $blue;
+                &:hover{
+                    transition:$transition-main;
+                    color: $blue;
+                    background-color: $primary-white;
+                }
+            }
         }
+        
         hr{
             margin-bottom: 60px;
             max-width: 850px;

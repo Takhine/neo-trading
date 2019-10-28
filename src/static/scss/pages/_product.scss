@@ -49,8 +49,9 @@
         font-size: $title-font;
     }
     .table-heading{
-        color: $bright-orange;
+        color: $blue;
         font-size: $regular-font;
+        text-decoration: underline;
     }
     // Table Start Table End
     .table{
@@ -60,6 +61,20 @@
             @include msm{
                 font-size: $small-font;
                 padding: 10px 24px 10px 16px;
+            }
+            
+        }
+        .MuiTableRow-root:nth-child(even){
+            background-color: $bright-orange;
+            .MuiTableCell-body{
+                color:$primary-white;
+            }
+        }
+        .MuiTableHead-root{
+            background: $blue;
+            .MuiTableCell-head{
+                color: $primary-white;
+
             }
         }
     }
@@ -71,7 +86,7 @@
         .note{
             font-weight: $bold-font;
             font-size: $small-font;
-            color: $bright-orange;
+            color: $blue;
         }
     }
     .layer{

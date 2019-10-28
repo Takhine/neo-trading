@@ -65,7 +65,9 @@ const Navbar = () => {
                         {leftSideList('left')}
                     </Drawer>
                     <div className="logo-container">
+                        <NavLink exact to="/">
                         <img src={logo} alt="Neo Traders" />
+                        </NavLink>
                     </div>
                     <div className="grow" />
 
