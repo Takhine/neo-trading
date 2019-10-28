@@ -8,6 +8,8 @@ import {
     TableRow,
     Paper
 } from '@material-ui/core';
+import Fade from 'react-reveal/Fade';
+
 const Layer = () => {
     const tables = [
         {
@@ -368,37 +370,39 @@ const Layer = () => {
                     return (
                         <Grid key={table.id} item xs={12} md={6} lg={4}>
                             <h4 className="table-heading">{table.heading}</h4>
-                            <Paper>
-                                <Table className="table" size="small" aria-label="simple table">
-                                    <TableHead>
-                                        <TableRow>
-                                            {table.header.map((header) => {
+                            <Fade>
+                                <Paper>
+                                    <Table className="table" size="small" aria-label="simple table">
+                                        <TableHead>
+                                            <TableRow>
+                                                {table.header.map((header) => {
+                                                    return (
+                                                        <TableCell key={header.id}>{header.title}</TableCell>
+                                                    )
+                                                })
+                                                }
+                                            </TableRow>
+                                        </TableHead>
+                                        <TableBody>
+                                            {table.rows.map((row) => {
                                                 return (
-                                                    <TableCell key={header.id}>{header.title}</TableCell>
+                                                    <TableRow hover key={row.id}>
+                                                        {row.data.map((data) => {
+                                                            return (
+                                                                <TableCell key={data.id} align="left">
+                                                                    {data.data}
+                                                                </TableCell>
+                                                            )
+                                                        })
+                                                        }
+                                                    </TableRow>
                                                 )
                                             })
                                             }
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {table.rows.map((row) => {
-                                            return (
-                                                <TableRow hover key={row.id}>
-                                                    {row.data.map((data) => {
-                                                        return (
-                                                            <TableCell key={data.id} align="left">
-                                                                {data.data}
-                                                            </TableCell>
-                                                        )
-                                                    })
-                                                    }
-                                                </TableRow>
-                                            )
-                                        })
-                                        }
-                                    </TableBody>
-                                </Table>
-                            </Paper>
+                                        </TableBody>
+                                    </Table>
+                                </Paper>
+                            </Fade>
                         </Grid>
                     )
                 })

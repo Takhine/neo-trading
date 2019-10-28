@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 
 import listIcon from 'static/images/icons/right-arrow.svg'
 import leaves from 'static/images/small-leaves.svg'
+import Fade from 'react-reveal/Fade';
 
 
 const benefitsList = [
@@ -62,10 +63,12 @@ const Benefits = () => {
                 {benefitsList.map((benefit) => {
                     return (
                         <Grid key={benefit.id} item className="benefit-grid" xs={12} md={6}>
-                            <div className="benefit-div">
+                           <Fade top>
+                           <div className="benefit-div">
                                 <img src={listIcon} alt="List Arrow" />
                                 <p>{benefit.benefit}</p>
                             </div>
+                           </Fade>
                         </Grid>
                     )
                 })}

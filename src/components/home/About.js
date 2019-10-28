@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@material-ui/core';
 
 import poultry from 'static/images/desktop-poultry.svg'
+import Fade from 'react-reveal/Fade';
 
 
 const About = () => {
@@ -24,7 +25,9 @@ const About = () => {
                     </Paper>
                 </Grid>
                 <Grid item className="about-grid" xs={12} md={4}>
+                    <Fade>
                     <img src={poultry} alt="Neo Trading Poultry" />
+                    </Fade>
                 </Grid>
             </Grid>
         </div>

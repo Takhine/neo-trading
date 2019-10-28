@@ -12,6 +12,7 @@ import bannerMobile from 'static/images/header-desktop.svg';
 import Contact from 'components/Contact';
 import cancel from 'static/images/icons/sidebar-cancel-icon.png';
 import {NavLink} from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 const Header = () => {
     const [state, setState] = React.useState({
         right:false,
@@ -35,7 +36,10 @@ const Header = () => {
                 <Grid item xs={12} sm={6}>
                     <div className="title-container">
                         <h1 className="main-title">Neo Trading</h1>
+                        <Fade top>
                         <h2 className="slogan">Your Trusted Business Partner</h2>
+
+                        </Fade>
                     </div>
                     <div className="header-buttons-container">
                         <NavLink exact to="/products">
@@ -58,8 +62,10 @@ const Header = () => {
 
                 <Grid item xs={12} sm={6}>
                     <div className="banner-container">
+                        <Fade>
                         <img src={banner} className="desktop" alt="Neo Trading Banner" />
                         <img src={bannerMobile} className="mobile" alt="Neo Trading Banner" />
+                        </Fade>
                     </div>
                 </Grid>
 
