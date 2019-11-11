@@ -40,7 +40,7 @@ const Broiler = () => {
                         { id: 1, data: 'Metabolisable energy (min)' },
                         { id: 2, data: '2900 kcal/kg' },
                         { id: 3, data: '2900 kcal/kg' },
-                        { id: 4, data: '30000 kcal/kg' }
+                        { id: 4, data: '3000 kcal/kg' }
                     ]
                 },
                 {

@@ -44,7 +44,7 @@ const Layer = () => {
                     id: 3,
                     data: [
                         { id: 1, data: 'Limestone' },
-                        { id: 2, data: '10 kgs' },
+                        { id: 2, data: '7.5 kgs' },
                     ]
                 },
                 {

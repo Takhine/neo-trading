@@ -37,6 +37,8 @@
     textarea{
         width: 100%;
         border: .5px solid $blue;
+        padding: 10px;
+        font-size: 1rem;
                 &:focus{
                     border: .5px solid $blue;
                 }

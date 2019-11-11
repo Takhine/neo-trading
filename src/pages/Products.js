@@ -10,6 +10,7 @@ const Products=()=> {
         <div className="products">
             <Header />
             <Broiler />
+        <hr/>
             <Layer />
         </div>
     )

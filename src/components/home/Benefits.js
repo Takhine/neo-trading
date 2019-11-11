@@ -14,7 +14,7 @@ const benefitsList = [
     },
     {
         id: 2,
-        benefit: 'Chances of error in mixing the medicines and trace mininerals are minimized',
+        benefit: 'Chances of error in mixing the medicines and trace minerals are minimized',
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const benefitsList = [
     },
     {
         id: 4,
-        benefit: 'Hassels ofpurchasing and storage of raw materials are minimized to a few',
+        benefit: 'Hassels of purchasing and storage of raw materials are minimized to a few',
     },
     {
         id: 5,

@@ -3,15 +3,15 @@
     .header{
         height: 100%;
         padding-top: 84px;
-        @include rwd(300,500){
-            height: 100vh;
-        }
-        @include msm{
-            height: 100vh;
-        }
-        @media (max-width:1024px) and (min-height:1024px){
-            height: 100%;
-        }
+        // @include rwd(300,500){
+        //     height: 100vh;
+        // }
+        // @include msm{
+        //     height: 100vh;
+        // }
+        // @media (max-width:1024px) and (min-height:1024px){
+        //     height: 100%;
+        // }
         .header-container{
             margin: auto;
             width: 100%;

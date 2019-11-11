@@ -1,4 +1,10 @@
 .products{
+    hr{
+        border-width: 1px;
+        margin-bottom: 0;
+        border-style: outset;
+        border-color: #f0f0f0;
+    }
     // Header Start
     .header{
         @extend .container;
@@ -46,7 +52,10 @@
     // Products
     .main-heading{
         color: $dark-orange;
-        font-size: $title-font;
+        font-size: 24px;
+        @include msm{
+            font-size: $large-font;
+        }
     }
     .table-heading{
         color: $blue;
